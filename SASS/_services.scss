@@ -1,0 +1,120 @@
+.services {
+  transform: translateY(40rem);
+  text-align: center;
+}
+
+.my__services {
+  padding-inline: 2rem;
+
+  h2 {
+    padding-block: 1rem;
+    font-size: 3.5rem;
+    font-family: "Genos", sans-serif;
+    font-weight: 300;
+    color: var(--clr-blue-700);
+
+    [aria-hidden] {
+      padding-inline-end: 0.5rem;
+      font-size: 2.5rem;
+      color: var(--clr-blue-500);
+    }
+  }
+
+  .design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8rem auto;
+    width: 90%;
+    border: 1px solid var(--clr-blue-700);
+    border-radius: 1rem;
+    padding: 0 1.5rem 3rem;
+
+    .service__icon {
+      width: 40%;
+      margin: 2em 0 1em;
+    }
+
+    h3 {
+      margin: 1rem 0;
+      color: var(--clr-blue-500);
+      font-size: 1.9rem;
+      font-family: "Josefin Sans", sans-serif;
+      letter-spacing: 2px;
+    }
+
+    p {
+      padding-block: 1.5rem;
+      font-size: 2rem;
+      font-family: "Genos", sans-serif;
+      line-height: 1.5;
+      color: var(--clr-white);
+    }
+
+    .btn__service {
+      display: inline-block;
+      margin-block-start: 1.5rem;
+      padding: 1.5rem 2rem;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+      font-family: "Josefin Sans", sans-serif;
+      background-color: var(--clr-blue-500);
+      color: var(--clr-white);
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+  }
+
+  .web__design {
+    @extend .design;
+  }
+
+  .online__marketing {
+    @extend .design;
+  }
+}
+
+@media (min-width: 768px) {
+  .my__services {
+    padding-inline: 2rem;
+
+    .design {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1.5rem auto;
+      width: 90%;
+      border: none;
+      padding-block-end: 2.5rem;
+      border-radius: 1rem;
+
+      .service__icon {
+        width: 20%;
+        margin: 2em 0 1em;
+      }
+
+      h3 {
+        margin: 1em 0;
+        color: var(--clr-blue-500);
+        letter-spacing: 2px;
+        font-size: 2rem;
+      }
+
+      p {
+        padding-block: 1.5rem;
+        font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+        font-family: "Genos", sans-serif;
+        color: var(--clr-white);
+        max-width: 80%;
+      }
+
+      .btn__service {
+        transform: scale(1);
+        transition: transform 500ms ease;
+      }
+      .btn__service:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

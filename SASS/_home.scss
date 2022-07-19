@@ -1,0 +1,60 @@
+.home {
+  transform: translateY(18rem);
+  text-align: center;
+
+  h1 {
+    margin-block-end: 2rem;
+    font-size: clamp(5rem, 4vw + 1rem, 10rem);
+    font-family: "Vujahday Script", cursive;
+    font-weight: 700;
+    color: var(--clr-blue-700);
+  }
+
+  .job-description {
+    margin-inline: auto;
+    font-size: clamp(2.5rem, 2vw + 1rem, 5rem);
+    font-weight: 300;
+    max-width: 90%;
+    color: var(--clr-white);
+    line-height: 1.7;
+  }
+
+  .job-title {
+    margin-block-start: 3rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--clr-blue-700);
+    letter-spacing: 2px;
+  }
+
+  .contact__btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: 15px;
+    font-family: "Genos", sans-serif;
+    font-weight: bold;
+    color: var(--clr-white);
+    background-color: #12395d5e;
+    border: 1px solid var(--clr-numbers);
+    border-radius: 1rem;
+    box-shadow: 0 0 30px 7px var(--clr-blue-700);
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 3px;
+    position: relative;
+    top: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    .contact__btn {
+      display: inline-block;
+      transform: scale(1);
+      transition: transform 500ms ease;
+    }
+    .contact__btn:hover {
+      transform: scale(1.1);
+    }
+  }
+}
